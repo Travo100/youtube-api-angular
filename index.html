@@ -10,6 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/style.min.css">
 </head>
 <body ng-app="youtubeApp">
@@ -21,10 +22,10 @@
   <section ng-controller="mainController as main">
     <div class="container">
       <h2 ng-bind="main.message"></h2>
-      <div class="youtube-thumbnail col-sm-4" ng-repeat="vid in main.videoListing">
+      <div class="youtube-thumbnail col-md-4 col-sm-6" ng-repeat="vid in main.videoListing">
         <a ng-href="https://www.youtube.com/watch?v={{vid.id.videoId}}" target="_blank">
           <img ng-src={{vid.snippet.thumbnails.medium.url}} />
-          <h6 ng-bind="vid.snippet.title"></h6>
+          <p ng-bind="vid.snippet.title"></p>
         </a>
       </div>
     </div>
