@@ -7,23 +7,16 @@ h2 {
   text-align: center;
   margin-bottom: 20px; }
 
-.youtube-thumbnail {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  text-align: center;
-  height: 225px; }
-  .youtube-thumbnail p {
-    font-weight: 300;
-    margin-top: 10px;
-    font-size: 16px;
-    letter-spacing: 1px; }
-  .youtube-thumbnail img {
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    max-width: 300px; }
-  .youtube-thumbnail a {
-    color: #fff; }
-    .youtube-thumbnail a:hover {
-      color: darkorange;
-      text-decoration: none; }
+.smarty-result {
+  background: #fff; }
+  .smarty-result ul {
+    margin: 0;
+    padding: 0; }
+  .smarty-result li {
+    color: #676767;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 13px; }
+    .smarty-result li:hover {
+      background: #f2f2f2;
+      cursor: pointer; }

@@ -9,30 +9,20 @@ h2 {
   margin-bottom: 20px;
 }
 
-.youtube-thumbnail {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  text-align: center;
-  height: 225px;
-  p {
-    font-weight: 300;
-    margin-top: 10px;
-    font-size: 16px;
-    letter-spacing: 1px;
+.smarty-result {
+  background: #fff;
+  ul {
+    margin: 0;
+    padding: 0;
   }
-
-  img {
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-  }
-
-  a {
-    color: #fff;
+  li {
+    color: #676767;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 13px;
     &:hover {
-      color: darkorange;
-      text-decoration: none;
+      background: #f2f2f2;
+      cursor: pointer;
     }
   }
 }

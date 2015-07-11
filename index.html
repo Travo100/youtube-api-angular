@@ -6,14 +6,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Using the Youtube Data API with AngularJS</title>
+  <title>Smarty Streets API with AngularJS</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/style.min.css">
 </head>
-<body ng-app="youtubeApp">
+<body ng-app="smartyStreetsApp">
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -22,12 +22,15 @@
   <section ng-controller="mainController as main">
     <div class="container">
       <h2 ng-bind="main.message"></h2>
-      <div class="youtube-thumbnail col-md-4 col-sm-6" ng-repeat="vid in main.videoListing">
-        <a ng-href="https://www.youtube.com/watch?v={{vid.id.videoId}}" target="_blank">
-          <img ng-src={{vid.snippet.thumbnails.medium.url}} />
-          <p ng-bind="vid.snippet.title"></p>
-        </a>
-      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <input type="text" id="smarty-address" name="smarty-address" ng-model="main.smartyAddress" ng-keyup="main.getSmartyAddress(main.smartyAddress)" class="form-control" />
+        <button ng-click="main.verifySmartyAddress('11270 Del Diablo Way', 'San Diego', 'CA')">Submit</button>
+        <div class="smarty-result">
+          <ul>
+            <li ng-repeat="address in main.listAdresses track by $index" ng-bind="address.text" ></li>
+          </ul>
+        </div>
+      </div> 
     </div>
   </section>
 
