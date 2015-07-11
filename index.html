@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Using the Youtube Data API with AngularJS</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="youtubeApp">
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <section ng-controller="mainController as main">
+    <div class="container">
+      <div class="youtube-thumbnail col-md-4" ng-repeat="vid in main.videoListing">
+        <a ng-href="https://www.youtube.com/watch?v={{vid.id.videoId}}" target="_blank">
+          <img ng-src={{vid.snippet.thumbnails.medium.url}} />
+          <h5 ng-bind="vid.snippet.title"></h5>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="youtubeFactory.js"></script>
+  <script src="youtubeController.js"></script>
+</body>
+</html>
