@@ -9,7 +9,8 @@
         
         var vm = this;
         vm.videoListing = [];
-
+        vm.message = "Youtube Data API with AngularJS";
+        
         function showVideos() {
           youtubeService.getVideos()
             .success(function(data){
@@ -18,5 +19,4 @@
         }
         showVideos();
     }
-
 })();

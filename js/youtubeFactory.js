@@ -1,6 +1,5 @@
-(function (){
-
-'use strict';
+(function(){
+  'use strict';
 
   angular
     .module('youtubeApp')
@@ -13,11 +12,10 @@
           youtubeFactory = {};
       
       youtubeFactory.getVideos = function() {
-        return $http.get(apiURL)
+        return $http.get(apiURL);
       };
       
       return youtubeFactory;
     
     }
-
 })();

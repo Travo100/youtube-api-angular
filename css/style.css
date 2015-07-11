@@ -1,11 +1,12 @@
+h2 {
+  text-align: center; }
+
 img {
   display: inline-block;
   width: 100%;
-  height: auto;
-}
+  height: auto; }
 
 .youtube-thumbnail {
   margin-top: 5px;
   margin-bottom: 5px;
-  text-align: center;
-}
+  text-align: center; }

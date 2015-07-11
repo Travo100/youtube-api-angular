@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/style.min.css">
 </head>
 <body ng-app="youtubeApp">
   <!--[if lt IE 7]>
@@ -20,18 +20,17 @@
   <!-- Add your site or application content here -->
   <section ng-controller="mainController as main">
     <div class="container">
-      <div class="youtube-thumbnail col-md-4" ng-repeat="vid in main.videoListing">
+      <h2 ng-bind="main.message"></h2>
+      <div class="youtube-thumbnail col-sm-4" ng-repeat="vid in main.videoListing">
         <a ng-href="https://www.youtube.com/watch?v={{vid.id.videoId}}" target="_blank">
           <img ng-src={{vid.snippet.thumbnails.medium.url}} />
-          <h5 ng-bind="vid.snippet.title"></h5>
+          <h6 ng-bind="vid.snippet.title"></h6>
         </a>
       </div>
     </div>
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-  <script src="app.js"></script>
-  <script src="youtubeFactory.js"></script>
-  <script src="youtubeController.js"></script>
+  <script src="assets/app.min.js"></script>
 </body>
 </html>
